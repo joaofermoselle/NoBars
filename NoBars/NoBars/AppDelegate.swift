@@ -35,7 +35,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         // Check what the current status is and update the variable.
         status = currentStatus()
-        print(status)
         
         // Initialise the menu bar button with the correct icon.
         initIcon()
@@ -122,6 +121,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return
             }
             
+            // Set value of key `autohide` in com.apple.dock to true.
+            guard setDockHidingKey(true) else {
+                print("Could not set the dock hiding key.")
+                return
+            }
+            
         } else {
             
             status = .Bars
@@ -132,12 +137,21 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 return
             }
             
+            // Set value of key `autohide` in com.apple.dock to false.
+            guard setDockHidingKey(false) else {
+                print("Could not set the dock hiding key.")
+                return
+            }
+            
         }
         
-        // Send notification for the OS to listen, check .GlobalPreferences, and update
-        // the menu bar visibility accordingly.
+        // Send notifications for the OS to listen, check .GlobalPreferences and com.apple.dock,
+        // and update the menu and dock bars visibility accordingly.
         dispatch_async(dispatch_get_main_queue()) {
             CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), "AppleInterfaceMenuBarHidingChangedNotification", nil, nil, true)
+        }
+        dispatch_async(dispatch_get_main_queue()) {
+            CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), "com.apple.dock.prefchanged", nil, nil, true)
         }
         
         updateIcon()
@@ -164,6 +178,33 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         var preferencesDict = preferencesDictTemp
         preferencesDict.updateValue(bool, forKey: "_HIHideMenuBar")
         NSUserDefaults.standardUserDefaults().setPersistentDomain(preferencesDict, forName: NSGlobalDomain)
+        
+        return true
+        
+    }
+    
+    
+    /**
+    Sets the value of the key `autohide` in com.apple.dock.plist,
+    located at ~/Library/Preferences/ to the value of `bool`.
+    
+    - Parameter bool: Value to which `autohide` should be set.
+    
+    - Returns: True if the operation succeeded, false if it did not.
+    */
+    func setDockHidingKey(bool: Bool) -> Bool {
+        
+        // Load com.apple.dock.plist to a dictionary
+        guard let preferencesDictTemp = NSUserDefaults.standardUserDefaults().persistentDomainForName("com.apple.dock") else {
+            print("Could not read com.apple.dock.plist")
+            return false
+        }
+        
+        var preferencesDict = preferencesDictTemp
+        preferencesDict.updateValue(bool, forKey: "autohide")
+        NSUserDefaults.standardUserDefaults().setPersistentDomain(preferencesDict, forName: "com.apple.dock")
+        
+        //CFPreferencesAppSynchronize("com.apple.dock")
         
         return true
         
