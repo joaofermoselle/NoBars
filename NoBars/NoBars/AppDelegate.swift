@@ -122,8 +122,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             
             // Set value of key `autohide` in com.apple.dock to true.
-            guard setDockHidingKey(true) else {
-                print("Could not set the dock hiding key.")
+            guard hideDock(true) else {
+                print("Could not turn off Dock hiding.")
                 return
             }
             
@@ -138,8 +138,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             
             // Set value of key `autohide` in com.apple.dock to false.
-            guard setDockHidingKey(false) else {
-                print("Could not set the dock hiding key.")
+            guard hideDock(false) else {
+                print("Could not turn on Dock hiding.")
                 return
             }
             
@@ -149,9 +149,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // and update the menu and dock bars visibility accordingly.
         dispatch_async(dispatch_get_main_queue()) {
             CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), "AppleInterfaceMenuBarHidingChangedNotification", nil, nil, true)
-        }
-        dispatch_async(dispatch_get_main_queue()) {
-            CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), "com.apple.dock.prefchanged", nil, nil, true)
         }
         
         updateIcon()
@@ -185,26 +182,22 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     
     /**
-    Sets the value of the key `autohide` in com.apple.dock.plist,
-    located at ~/Library/Preferences/ to the value of `bool`.
+    Sets the automatic hiding property of the Dock. It is implemented using AppleScript.
     
-    - Parameter bool: Value to which `autohide` should be set.
+    - Parameter bool: True if automatic Dock hiding should be on.
     
     - Returns: True if the operation succeeded, false if it did not.
     */
-    func setDockHidingKey(bool: Bool) -> Bool {
+    func hideDock(bool: Bool) -> Bool {
         
-        // Load com.apple.dock.plist to a dictionary
-        guard let preferencesDictTemp = NSUserDefaults.standardUserDefaults().persistentDomainForName("com.apple.dock") else {
-            print("Could not read com.apple.dock.plist")
+        let source = "tell application \"System Events\" to set autohide of dock preferences to \(bool)"
+        
+        guard let script = NSAppleScript(source: source) else {
+            print("Could not create script to show/hide the Dock.")
             return false
         }
         
-        var preferencesDict = preferencesDictTemp
-        preferencesDict.updateValue(bool, forKey: "autohide")
-        NSUserDefaults.standardUserDefaults().setPersistentDomain(preferencesDict, forName: "com.apple.dock")
-        
-        //CFPreferencesAppSynchronize("com.apple.dock")
+        script.executeAndReturnError(nil)
         
         return true
         
