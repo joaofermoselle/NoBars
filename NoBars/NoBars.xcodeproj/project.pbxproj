@@ -1,0 +1,387 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CFA209221C17A7F000929897 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA209211C17A7F000929897 /* AppDelegate.swift */; };
+		CFA209241C17A7F000929897 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFA209231C17A7F000929897 /* Assets.xcassets */; };
+		CFA209271C17A7F000929897 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CFA209251C17A7F000929897 /* MainMenu.xib */; };
+		CFA209321C17A7F100929897 /* NoBarsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFA209311C17A7F100929897 /* NoBarsTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CFA2092E1C17A7F100929897 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CFA209161C17A7F000929897 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CFA2091D1C17A7F000929897;
+			remoteInfo = NoBars;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CFA2091E1C17A7F000929897 /* NoBars.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoBars.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA209211C17A7F000929897 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CFA209231C17A7F000929897 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CFA209261C17A7F000929897 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		CFA209281C17A7F000929897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFA2092D1C17A7F100929897 /* NoBarsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoBarsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CFA209311C17A7F100929897 /* NoBarsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoBarsTests.swift; sourceTree = "<group>"; };
+		CFA209331C17A7F100929897 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CFA2091B1C17A7F000929897 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA2092A1C17A7F100929897 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CFA209151C17A7F000929897 = {
+			isa = PBXGroup;
+			children = (
+				CFA209201C17A7F000929897 /* NoBars */,
+				CFA209301C17A7F100929897 /* NoBarsTests */,
+				CFA2091F1C17A7F000929897 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CFA2091F1C17A7F000929897 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CFA2091E1C17A7F000929897 /* NoBars.app */,
+				CFA2092D1C17A7F100929897 /* NoBarsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CFA209201C17A7F000929897 /* NoBars */ = {
+			isa = PBXGroup;
+			children = (
+				CFA209211C17A7F000929897 /* AppDelegate.swift */,
+				CFA209231C17A7F000929897 /* Assets.xcassets */,
+				CFA209251C17A7F000929897 /* MainMenu.xib */,
+				CFA209281C17A7F000929897 /* Info.plist */,
+			);
+			path = NoBars;
+			sourceTree = "<group>";
+		};
+		CFA209301C17A7F100929897 /* NoBarsTests */ = {
+			isa = PBXGroup;
+			children = (
+				CFA209311C17A7F100929897 /* NoBarsTests.swift */,
+				CFA209331C17A7F100929897 /* Info.plist */,
+			);
+			path = NoBarsTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CFA2091D1C17A7F000929897 /* NoBars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFA209361C17A7F100929897 /* Build configuration list for PBXNativeTarget "NoBars" */;
+			buildPhases = (
+				CFA2091A1C17A7F000929897 /* Sources */,
+				CFA2091B1C17A7F000929897 /* Frameworks */,
+				CFA2091C1C17A7F000929897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoBars;
+			productName = NoBars;
+			productReference = CFA2091E1C17A7F000929897 /* NoBars.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CFA2092C1C17A7F100929897 /* NoBarsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CFA209391C17A7F100929897 /* Build configuration list for PBXNativeTarget "NoBarsTests" */;
+			buildPhases = (
+				CFA209291C17A7F100929897 /* Sources */,
+				CFA2092A1C17A7F100929897 /* Frameworks */,
+				CFA2092B1C17A7F100929897 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CFA2092F1C17A7F100929897 /* PBXTargetDependency */,
+			);
+			name = NoBarsTests;
+			productName = NoBarsTests;
+			productReference = CFA2092D1C17A7F100929897 /* NoBarsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CFA209161C17A7F000929897 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = JRFS;
+				TargetAttributes = {
+					CFA2091D1C17A7F000929897 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					CFA2092C1C17A7F100929897 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = CFA2091D1C17A7F000929897;
+					};
+				};
+			};
+			buildConfigurationList = CFA209191C17A7F000929897 /* Build configuration list for PBXProject "NoBars" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CFA209151C17A7F000929897;
+			productRefGroup = CFA2091F1C17A7F000929897 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CFA2091D1C17A7F000929897 /* NoBars */,
+				CFA2092C1C17A7F100929897 /* NoBarsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CFA2091C1C17A7F000929897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA209241C17A7F000929897 /* Assets.xcassets in Resources */,
+				CFA209271C17A7F000929897 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA2092B1C17A7F100929897 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CFA2091A1C17A7F000929897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA209221C17A7F000929897 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA209291C17A7F100929897 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CFA209321C17A7F100929897 /* NoBarsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CFA2092F1C17A7F100929897 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CFA2091D1C17A7F000929897 /* NoBars */;
+			targetProxy = CFA2092E1C17A7F100929897 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CFA209251C17A7F000929897 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CFA209261C17A7F000929897 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CFA209341C17A7F100929897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CFA209351C17A7F100929897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CFA209371C17A7F100929897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NoBars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrfs.NoBars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CFA209381C17A7F100929897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NoBars/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrfs.NoBars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CFA2093A1C17A7F100929897 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NoBarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrfs.NoBarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoBars.app/Contents/MacOS/NoBars";
+			};
+			name = Debug;
+		};
+		CFA2093B1C17A7F100929897 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = NoBarsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jrfs.NoBarsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoBars.app/Contents/MacOS/NoBars";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CFA209191C17A7F000929897 /* Build configuration list for PBXProject "NoBars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA209341C17A7F100929897 /* Debug */,
+				CFA209351C17A7F100929897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CFA209361C17A7F100929897 /* Build configuration list for PBXNativeTarget "NoBars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA209371C17A7F100929897 /* Debug */,
+				CFA209381C17A7F100929897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CFA209391C17A7F100929897 /* Build configuration list for PBXNativeTarget "NoBarsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFA2093A1C17A7F100929897 /* Debug */,
+				CFA2093B1C17A7F100929897 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CFA209161C17A7F000929897 /* Project object */;
+}
