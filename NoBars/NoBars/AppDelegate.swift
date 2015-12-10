@@ -151,6 +151,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             CFNotificationCenterPostNotification(CFNotificationCenterGetDistributedCenter(), "AppleInterfaceMenuBarHidingChangedNotification", nil, nil, true)
         }
         
+        guard cleanUpDesktop() else {
+            print("Could not clean up Desktop.")
+            return
+        }
+        
         updateIcon()
         
     }
@@ -201,6 +206,36 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         return true
         
+    }
+    
+    
+    func cleanUpDesktop() -> Bool {
+        var source = ""
+        source += "tell application \"System Events\"\n"
+        source += "tell application \"Finder\" to activate desktop\n"
+        source += "delay 0.1\n"
+        source += "tell process \"Finder\" to click menu item \"Clean Up\" of menu \"View\" of menu bar item \"View\" of front menu bar\n"
+        source += "end tell"
+        print(source)
+        
+        guard let script = NSAppleScript(source: source) else {
+            print("Could not create script to clean up the desktop.")
+            return false
+        }
+        
+        var errorDict: NSDictionary?
+        
+        script.executeAndReturnError(&errorDict)
+        
+        if errorDict != nil {
+            print(errorDict)
+            print("An error occurred executing script to clean up the desktop.")
+            return false
+        }
+        
+        print("Executed script")
+        
+        return true
     }
     
     
