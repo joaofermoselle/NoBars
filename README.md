@@ -1,6 +1,8 @@
 # NoBars
 
-*NoBars* is a small utility that allows you to quickly hide the menu and the dock bars on your desktop just by clicking on a menu icon. 
+*Being behind bars may prevent you from enjoying all the sweet free space...*
+
+**NoBars** is a small utility that allows you to quickly hide the menu and the dock bars on your desktop just by clicking on a menu icon. 
 
 It requires OS X El Capitan.
 
