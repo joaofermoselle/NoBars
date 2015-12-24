@@ -212,8 +212,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func cleanUpDesktop() -> Bool {
         var source = ""
         source += "tell application \"System Events\"\n"
-        source += "tell application \"Finder\" to activate desktop\n"
-        source += "delay 0.1\n"
+        source += "tell application \"Finder\" to activate\n"
+        source += "repeat while (value of attribute \"AXfocused\" of group 1 of scroll area of process \"Finder\" is {false})\n"
+        source += "tell process \"Finder\" to click menu item \"Cycle Through Windows\" of menu \"Window\" of menu bar item \"Window\" of front menu bar\n"
+        source += "end repeat\n"
         source += "tell process \"Finder\" to click menu item \"Clean Up\" of menu \"View\" of menu bar item \"View\" of front menu bar\n"
         source += "end tell"
         print(source)
