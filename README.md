@@ -6,7 +6,7 @@
 
 It requires OS X El Capitan.
 
-![](http://i.imgur.com/AHE4LTY.gif)
+![](http://i.imgur.com/QJzkt7i.gif)
 
 ## Why do I need this?
 
