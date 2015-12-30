@@ -6,6 +6,8 @@
 
 It requires OS X El Capitan.
 
+![](http://i.imgur.com/AHE4LTY.gif)
+
 ## Why do I need this?
 
 Hiding the Dock requires you to ctrl-click on the Dock and select the "hide" option. Hiding the menu bar needs you to go the System Preferences. And then your icons will appear misplaced. Then you might not like the new look and you have to undo everything. Yuck!
